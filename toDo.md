@@ -24,10 +24,10 @@ promts and asks for essential serverInfo.sh information such as:
 
 # scripts 
 ## serverInfo 
-## -update -read -dir -startScript -java -backupDir -user -backupNum
-## -backupSize -backupTimer -restartTimes -memoryGuard -rgr -rgd -rgs
-- -update / -read weather to read or write to the following:
 
+-update -read -dir -startScript -java -backupDir -user -backupNum -backupSize -backupTimer -restartTimes -memoryGuard -rgr -rgd -rgs
+
+- -update / -read weather to read or write to the following:
 
 - -dir (directory server runs from) (no default, must be set)
 - -startScript (name of the bash script that launches the server) or -jar (instead gameServer.service will Handle launch {WIP}) (no default, must be set)
