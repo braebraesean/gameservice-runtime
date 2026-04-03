@@ -29,6 +29,11 @@ promts and asks for essential serverInfo.sh information such as:
 
 - -update / -read weather to read or write to the following:
 
+- -read reads from config file instead
+
+- -create, ran exclusively by the gameServer.service on first creation of a gameserver
+if there is not yet a config for gameServer in the servers config dir, creates one with defaujlt settings
+
 - -dir (directory server runs from) (no default, must be set)
 - -startScript (name of the bash script that launches the server) or -jar (instead gameServer.service will Handle launch {WIP}) (no default, must be set)
 - -java (version of java to run the server on if applicable) (no default, must be set)
