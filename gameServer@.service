@@ -1,0 +1,8 @@
+[Unit]
+Description=%i Server
+After=network.target
+
+[Service]
+Type=simple
+EnvironmentFile=-/etc/systemd/system/gameServers/%i.conf
+ExecStart=/bin/bash -c '$serverDir/run.sh'
