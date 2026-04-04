@@ -25,14 +25,15 @@ promts and asks for essential serverInfo.sh information such as:
 # scripts 
 ## serverInfo 
 
--update -read -dir -startScript -java -backupDir -user -backupNum -backupSize -backupTimer -restartTimes -memoryGuard -rgr -rgd -rgs
+-update -read -start -create -dir -startScript -java -backupDir -user -backupNum -backupSize -backupTimer -restartTimes -memoryGuard -rgr -rgd -rgs
 
 - -update / -read weather to read or write to the following:
 
 - -read reads from config file instead
 
-- -create, ran exclusively by the gameServer.service on first creation of a gameserver
-if there is not yet a config for gameServer in the servers config dir, creates one with defaujlt settings
+- -create {$serverName} creates gameserver configs if there is not yet a config for $serverName.conf in gameServers systemd config folder
+
+- -start {$serverName} starts server with systemctl start gameServer@$servername.service
 
 - -dir (directory server runs from) (no default, must be set)
 - -startScript (name of the bash script that launches the server) or -jar (instead gameServer.service will Handle launch {WIP}) (no default, must be set)
