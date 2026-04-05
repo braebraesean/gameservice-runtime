@@ -1,0 +1,42 @@
+#!/bin/bash
+#main gameServer script redirects args to proper gameServer internal commands
+InternalLib=/opt/gameServer/lib
+Servers=/opt/gameServer/servers/
+ServerName="$1"
+shift
+
+case "$1" in
+	-create)
+		shift
+		"$InternalLib/serverCreate.sh" "$ServerName" "$@"
+	;; 
+	-update)
+		if [[ -f "$Servers/$ServerName" ]]; then
+		       shift
+			#serverinfo $@
+		else
+			echo "ERROR: could not find server under name $ServerName"
+		fi
+	-read)
+	#read code here
+	;;
+	-start)
+	#start code here
+	;;
+	-stop)
+	#stop code here
+	;;
+	-status)
+	#status code here
+	;;
+	-restart)
+	#restart code here
+	;;
+	-enable)
+	#enable on boot code here
+	;;
+	-disable)
+	#disable run on boott code here
+	#;;
+esac	
+	
