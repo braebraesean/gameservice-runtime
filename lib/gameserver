@@ -8,7 +8,7 @@ shift
 case "$1" in
 	-create)
 		shift
-		"$InternalLib/serverCreate.sh" "$ServerName" "$@"
+		"$InternalLib/serverCreate.sh" "$ServerName"
 	;; 
 	-update)
 		if [[ -f "$Servers/$ServerName" ]]; then

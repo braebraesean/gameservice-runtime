@@ -36,7 +36,7 @@ promts and asks for essential serverInfo.sh information such as:
 - -start {$serverName} starts server with systemctl start gameServer@$servername.service
 
 - -dir (directory server runs from) (no default, must be set)
-- -startScript (name of the bash script that launches the server) or -jar (instead gameServer.service will Handle launch {WIP}) (no default, must be set)
+- -jvmArgs (launch args) (default "-Xms4G -Xmx12G")
 - -java (version of java to run the server on if applicable) (no default, must be set)
 - -backupDir (location to save backups to) (default ~/serverBackups)
 - -user (which user to run server through) (for permissions) (no default, must be set)
@@ -50,7 +50,7 @@ promts and asks for essential serverInfo.sh information such as:
 - -rgs (resource-guard storage, sets storage limits so resource-guard will shutdown services if there is risk of corruption due to lack of storage space) (default 3gb) (set to -1 to disable)
 
 ## run
-
+RESTART WHEN CRASH REPORT FILE IS MODIFIED
 {WIP} will launch the server using a user_jvm_args file and serverInfo.sh's ($jar)
 
 and potentially check for memory leaks every serverInfo.sh's ($MemoryGuard)

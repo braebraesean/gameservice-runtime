@@ -4,5 +4,5 @@ After=network.target
 
 [Service]
 Type=simple
-EnvironmentFile=-/etc/systemd/system/gameServers/%i.conf
-ExecStart=/bin/bash -c '$serverDir/run.sh'
+EnvironmentFile=/opt/gameServer/servers/%i.conf
+ExecStart=/bin/bash -c "$serverDir/run.sh"
